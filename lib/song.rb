@@ -33,17 +33,19 @@ class Song
     options.each do |property, value|
       self.send("#{property}=", value)
     end
-    #take the the hash equal to options pass it through a block send the thee instance of propertyy key and value into the the hash  
+    #take the the hash equal to options pass it through a block send the thee instance of propertyy key and value into the the hash
   end
 
   def save
     sql = "INSERT INTO #{table_name_for_insert} (#{col_names_for_insert}) VALUES (#{values_for_insert})"
     DB[:conn].execute(sql)
     @id = DB[:conn].execute("SELECT last_insert_rowid() FROM #{table_name_for_insert}")[0][0]
+    #when saving get the position at 0 and then in the array inside of the array get at position o
   end
 
   def table_name_for_insert
     self.class.table_name
+    #
   end
 
   def values_for_insert
