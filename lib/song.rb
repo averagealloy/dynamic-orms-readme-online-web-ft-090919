@@ -59,6 +59,7 @@ class Song
 
   def col_names_for_insert
     self.class.column_names.delete_if {|col| col == "id"}.join(", ")
+    #take and instence of class and coloum_name delete if there is a duplicate and join that array at the ","
   end
 
   def self.find_by_name(name)
