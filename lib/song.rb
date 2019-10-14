@@ -6,6 +6,7 @@ class Song
 
   def self.table_name
     self.to_s.downcase.pluralize
+    #taking what ever you class name is and make it LC and PZ it 
   end
 
   def self.column_names
@@ -59,6 +60,3 @@ class Song
   end
 
 end
-
-
-
