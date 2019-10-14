@@ -13,11 +13,12 @@ class Song
     DB[:conn].results_as_hash = true
     # are the results in a hash
     sql = "pragma table_info('#{table_name}')"
-    #have to understand what pragma is better 
+    #have to understand what pragma is better
     table_info = DB[:conn].execute(sql)
     column_names = []
     table_info.each do |row|
       column_names << row["name"]
+      
     end
     column_names.compact
   end
