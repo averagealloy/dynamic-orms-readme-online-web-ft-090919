@@ -45,7 +45,7 @@ class Song
 
   def table_name_for_insert
     self.class.table_name
-    #
+    #call the instance of the class method and the table_name method 
   end
 
   def values_for_insert
