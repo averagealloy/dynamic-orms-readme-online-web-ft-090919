@@ -18,13 +18,15 @@ class Song
     column_names = []
     table_info.each do |row|
       column_names << row["name"]
-      
+      #take the name of the row and shovle that into the var colum name 
     end
     column_names.compact
+    #takes the array and removes the nil
   end
 
   self.column_names.each do |col_name|
     attr_accessor col_name.to_sym
+    #take the instance of the coloum names for every instance do add a attr_accessor to that colum name and make it symbol
   end
 
   def initialize(options={})
