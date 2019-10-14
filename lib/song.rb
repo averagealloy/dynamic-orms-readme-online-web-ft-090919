@@ -33,6 +33,7 @@ class Song
     options.each do |property, value|
       self.send("#{property}=", value)
     end
+    #take the the hash equal  
   end
 
   def save
