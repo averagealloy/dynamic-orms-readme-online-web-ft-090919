@@ -6,12 +6,12 @@ class Song
 
   def self.table_name
     self.to_s.downcase.pluralize
-    #taking what ever you class name is and make it LC and PZ it 
+    #taking what ever you class name is and make it LC and PZ it
   end
 
   def self.column_names
     DB[:conn].results_as_hash = true
-
+    # are the results in a hash
     sql = "pragma table_info('#{table_name}')"
 
     table_info = DB[:conn].execute(sql)
