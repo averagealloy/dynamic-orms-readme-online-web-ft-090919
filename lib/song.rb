@@ -18,7 +18,7 @@ class Song
     column_names = []
     table_info.each do |row|
       column_names << row["name"]
-      #take the name of the row and shovle that into the var colum name 
+      #take the name of the row and shovle that into the var colum name
     end
     column_names.compact
     #takes the array and removes the nil
