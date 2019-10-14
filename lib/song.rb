@@ -45,7 +45,7 @@ class Song
 
   def table_name_for_insert
     self.class.table_name
-    #call the instance of the class method and the table_name method 
+    #call the instance of the class method and the table_name method
   end
 
   def values_for_insert
@@ -54,6 +54,7 @@ class Song
       values << "'#{send(col_name)}'" unless send(col_name).nil?
     end
     values.join(", ")
+    #have an empty array pass the instance of class and column_name for each instance of that do (a var) which shocles a colum name in unless it is nil
   end
 
   def col_names_for_insert
